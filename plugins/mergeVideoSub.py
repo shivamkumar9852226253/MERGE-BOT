@@ -98,9 +98,9 @@ async def mergeSub(c: Client, cb: CallbackQuery, new_file_name: str):
         formatDB.update({cb.from_user.id: None})
         return
     try:
-        await cb.message.edit("✅ Sucessfully Muxed Video !")
+        await cb.message.edit("✅ Sucessfully Mixed Video !")
     except MessageNotModified:
-        await cb.message.edit("Sucessfully Muxed Video ! ✅")
+        await cb.message.edit("Sucessfully Mixed Video ! ✅")
     LOGGER.info(f"Video muxed for: {cb.from_user.first_name} ")
     await asyncio.sleep(3)
     file_size = os.path.getsize(subbed_video)
